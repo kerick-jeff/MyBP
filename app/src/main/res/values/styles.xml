@@ -1,0 +1,152 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:listDivider">@color/listDivider</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:typeface">sans</item>
+        <item name="buttonStyle">@style/ButtonStyle</item>
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+        <item name="android:textViewStyle">@style/TextViewModerate</item>
+        <item name="android:editTextColor">@color/textColor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="navigationIcon">@drawable/ic_arrow_back_white_24dp</item>
+    </style>
+
+    <style name="HorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/teal</item>
+    </style>
+
+    <style name="ButtonSuccess" parent="ButtonStyle">
+        <item name="backgroundTint">@color/success</item>
+    </style>
+
+    <style name="ButtonInfo" parent="ButtonStyle">
+        <item name="backgroundTint">@color/info</item>
+    </style>
+
+    <style name="ButtonWarning" parent="ButtonStyle">
+        <item name="backgroundTint">@color/warning</item>
+    </style>
+
+    <style name="ButtonDanger" parent="ButtonStyle">
+        <item name="backgroundTint">@color/danger</item>
+    </style>
+
+    <style name="ButtonModerate" parent="ButtonStyle">
+        <item name="android:textColor">@color/teal</item>
+        <item name="backgroundTint">@color/gray_light</item>
+    </style>
+
+    <style name="TextViewHeading" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:background">#f4f4f4</item>
+        <item name="android:paddingLeft">72dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="TextViewModerate">
+        <item name="android:textSize">8pt</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="TextViewPlans">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="TextViewPlansCancel" parent="TextViewPlans">
+        <item name="android:layout_height">65dp</item>
+    </style>
+
+    <style name="TextViewPlansIncomeExpenses" parent="TextViewPlans">
+        <item name="android:background">@color/yellow</item>
+    </style>
+
+    <style name="TextViewPlansIncome" parent="TextViewPlans">
+        <item name="android:background">@color/green</item>
+    </style>
+
+    <style name="TextViewPlansExpenses" parent="TextViewPlans">
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="TextViewPlansCancelIncomeExpenses" parent="TextViewPlansCancel">
+        <item name="android:background">@color/yellow</item>
+    </style>
+
+    <style name="TextViewPlansCancelIncome" parent="TextViewPlansCancel">
+        <item name="android:background">@color/green</item>
+    </style>
+
+    <style name="TextViewPlansCancelExpenses" parent="TextViewPlansCancel">
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="TextViewPlansNumber">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12pt</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewPlansNumberIncomeExpenses" parent="TextViewPlansNumber">
+        <item name="android:textColor">@color/yellow</item>
+    </style>
+
+    <style name="TextViewPlansNumberIncome" parent="TextViewPlansNumber">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="TextViewPlansNumberExpenses" parent="TextViewPlansNumber">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="SwitchStyle" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+</resources>

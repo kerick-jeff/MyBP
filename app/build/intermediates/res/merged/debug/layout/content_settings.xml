@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutProfile"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_profile"
+                android:id="@+id/textViewProfileHeader"
+                style="@style/TextViewHeading" />
+            <Switch
+                android:text="@string/profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchProfile"
+                style="@style/SwitchStyle"
+                android:onClick="onClickProfile" />
+
+            <View style="@style/HorizontalDivider" />
+
+            <Switch
+                android:text="@string/profile_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchGoogle"
+                style="@style/SwitchStyle"
+                android:enabled="false" />
+            <TextView
+                android:text="@string/settings_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewHeading"
+                android:id="@+id/textViewNotificationsHeader" />
+
+            <TextView
+                android:text="@string/notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewNotifications"
+                android:clickable="true"
+                android:onClick="onClickShowNotificationsActivity" />
+
+            <TextView
+                android:text="@string/settings_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSetCurrency"
+                style="@style/TextViewHeading" />
+
+            <Switch
+                android:text="@string/currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchCurrency"
+                style="@style/SwitchStyle"
+                android:onClick="onClickCurrency" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

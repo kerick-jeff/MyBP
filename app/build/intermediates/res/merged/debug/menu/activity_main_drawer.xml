@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard_grey_700_24dp"
+            android:title="@string/nav_dashboard" />
+        <item
+            android:id="@+id/nav_plan"
+            android:icon="@drawable/ic_assignment_grey_700_24dp"
+            android:title="@string/nav_plan" />
+        <item
+            android:id="@+id/nav_plans"
+            android:icon="@drawable/ic_view_day_grey_700_24dp"
+            android:title="@string/nav_plans" />
+        <item
+            android:id="@+id/nav_income"
+            android:icon="@drawable/ic_attach_money_grey_700_24dp"
+            android:title="@string/nav_income" />
+        <item
+            android:id="@+id/nav_expenses"
+            android:icon="@drawable/ic_money_off_grey_700_24dp"
+            android:title="@string/nav_expenses" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_multiline_chart_grey_700_24dp"
+            android:title="@string/nav_statistics" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_grey_700_24dp"
+            android:title="@string/nav_settings" />
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_star_grey_700_24dp"
+            android:title="@string/nav_rate" />
+        <item
+            android:id="@+id/nav_help_feedback"
+            android:icon="@drawable/ic_help_grey_700_24dp"
+            android:title="@string/nav_help_feedback" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_grey_700_24dp"
+            android:title="@string/nav_about" />
+    </group>
+</menu>
