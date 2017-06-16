@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "com.example.kerick.mybp"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -35,5 +35,6 @@ dependencies {
     compile 'com.android.support:support-v4:25.0.1'
     compile 'com.android.support:support-vector-drawable:25.0.1'
     compile 'com.getbase:floatingactionbutton:1.10.0'
+    compile 'com.github.clans:fab:1.6.4'
     testCompile 'junit:junit:4.12'
 }

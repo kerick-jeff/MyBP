@@ -27,7 +27,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/switchProfile"
                 style="@style/SwitchStyle"
-                android:onClick="onClickProfile" />
+                android:onClick="onClickProfile"
+                android:background="?attr/selectableItemBackground" />
 
             <View style="@style/HorizontalDivider" />
 
@@ -51,7 +52,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewNotifications"
                 android:clickable="true"
-                android:onClick="onClickShowNotificationsActivity" />
+                android:background="?attr/selectableItemBackground"
+                android:onClick="onClickShowNotificationsActivity"
+                style="@style/SwitchStyle" />
 
             <TextView
                 android:text="@string/settings_currency"
@@ -66,7 +69,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/switchCurrency"
                 style="@style/SwitchStyle"
-                android:onClick="onClickCurrency" />
+                android:onClick="onClickCurrency"
+                android:background="?attr/selectableItemBackground" />
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

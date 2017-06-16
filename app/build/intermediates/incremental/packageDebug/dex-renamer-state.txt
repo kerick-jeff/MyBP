@@ -1,4 +1,7 @@
-#Tue May 23 14:26:44 WAT 2017
-base.0=/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Fri Jun 16 19:15:24 WAT 2017
+base.0=/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a529cccf50661f3a7387bf006a16aae21a19f1ab
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.1=/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_91bdad364caaae8a9e74da0e615e6c134dd32cb5/classes.dex
+base.1=/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_91bdad364caaae8a9e74da0e615e6c134dd32cb5
+file.0=/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a529cccf50661f3a7387bf006a16aae21a19f1ab/classes.dex

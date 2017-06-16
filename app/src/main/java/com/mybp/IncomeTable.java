@@ -49,7 +49,7 @@ public class IncomeTable extends DatabaseTable {
     }
 
     @Override
-    public boolean insert() {
+    public long insert() {
         SQLiteDatabase database = DatabaseHelper.getInstance(DatabaseHelper.getDhContext()).getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -57,6 +57,6 @@ public class IncomeTable extends DatabaseTable {
 
         database.insert(name, null, values);
 
-        return true;
+        return 0;
     }
 }

@@ -36,13 +36,21 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBoxScreenshotsLogs"
                 android:padding="12dp"
-                android:checked="true" />
+                android:checked="true"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:text="take screen shot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonScreenShot"
+                android:onClick="onClickScreenShot" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                app:srcCompat="@mipmap/ic_launcher"
-                android:id="@+id/imageView2" />
+                android:id="@+id/imageViewScreenShot"
+                android:background="@color/gray" />
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

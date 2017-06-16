@@ -1,6 +1,14 @@
 [
     {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-tvdpi/ic_action_facebook.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-tvdpi/ic_action_facebook.png"
+    },
+    {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-tvdpi/facebook.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-tvdpi/facebook.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-tvdpi/ic_action_twitter.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-tvdpi/ic_action_twitter.png"
     }
 ]

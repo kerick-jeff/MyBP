@@ -14,8 +14,8 @@ import android.support.v7.app.AlertDialog;
 
 public class RateApp extends DialogFragment {
     private final String packageName = "com.mybp";
-    private final static int LAUNCHES_UNTIL_PROMPT = 10;
-    private final static int DAYS_UNTIL_PROMPT = 10;
+    private final static int LAUNCHES_UNTIL_PROMPT = 5;
+    private final static int DAYS_UNTIL_PROMPT = 5;
 
     public void appLaunched(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("MyBPreferences", Context.MODE_PRIVATE);

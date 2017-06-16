@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">MyBP: Budget Planner</string>
+    <string name="app_name">MyBP\nBudget Planner</string>
     <string name="facebook_app_id">744313335720418</string>
 
     <!-- Strings related to ImageView descriptions and other MyBP descriptions -->
     <string name="app_icon_desc">MyBP icon</string>
     <string name="app_about_mybp">
-        MyBP: Budget Planner, a Personal Finance and Budget Planner app. All information you provide or store using this app remains personal and is not stored on remote servers.
+        A Personal Finance and Budget Planner app. All information you provide or store using this app remains personal and is not stored on remote servers.
     </string>
 
     <!-- -->
@@ -65,8 +65,12 @@
     <string name="income_expenses_today">Today</string>
     <string name="income_expenses_all">All</string>
     <string name="income_expenses_create">Create</string>
+    <string name="income_expenses_add">Add</string>
     <string name="income_expenses_plan_hint">0.0</string>
     <string name="income_expenses_hint">Fill only fields you would like to plan for</string>
+    <string name="income_expenses_index">00</string>
+    <string name="income_expenses_description">Description</string>
+    <string name="income_expenses_expired">Expired</string>
 
     <!-- About Activity -->
     <string name="facebook_like">Like us on facebook</string>
@@ -77,16 +81,19 @@
     <string name="settings_notification">Notification Settings</string>
     <string name="settings_currency">Currency Settings</string>
     <string name="profile">Profile</string>
+    <string name="profile_sub">Provide information about your personal account</string>
     <string name="profile_google">Use Google account</string>
     <string name="profile_google_sub">Allow MyBP to use your Google account to setup a basic profile</string>
     <string name="notification">Notifications</string>
-    <string name="notificaiton_sub">Receive notifications</string>
+    <string name="notification_sub">Set notification preferences</string>
+    <string name="notification_sub_2">Allow MyBP to remind you about updating your daily transactions</string>
     <string name="notification_individual">Individual notification</string>
     <string name="notification_individual_sub">Set individual notifications for each budget plan</string>
     <string name="notification_sound">Notification sound</string>
     <string name="notification_light">Notification light</string>
     <string name="notification_vibration">Notification vibrations</string>
     <string name="notification_period">Set notification period</string>
+    <string name="notification_period_sub">When would you like to receive notifications?</string>
     <string name="currency">Currency</string>
     <string name="currency_sub">Set default currency for all your transactions</string>
 
@@ -105,4 +112,7 @@
     <string name="title_activity_help_feedback">Help &amp; Feedback</string>
     <string name="title_activity_feedback">Feedback</string>
 
+    <string name="fab_facebook">Like us on Facebook</string>
+    <string name="fab_twitter">Follow us on Twitter</string>
+    <string name="fab_email">Contact us</string>
 </resources>

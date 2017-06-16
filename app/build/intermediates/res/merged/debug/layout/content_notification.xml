@@ -21,7 +21,8 @@
                 android:id="@+id/switchNotifications"
                 style="@style/SwitchStyle"
                 android:checked="false"
-                android:onClick="onClickReceiveNotifications" />
+                android:onClick="onClickReceiveNotifications"
+                android:background="?attr/selectableItemBackground" />
 
             <View
                 android:id="@id/divider"
@@ -34,7 +35,8 @@
                 android:id="@+id/switchNotificationSound"
                 android:checked="false"
                 style="@style/SwitchStyle"
-                android:onClick="onClickSoundNotification" />
+                android:onClick="onClickSoundNotification"
+                android:background="?attr/selectableItemBackground" />
 
             <View
                 android:id="@id/divider"
@@ -47,7 +49,8 @@
                 android:id="@+id/switchNotificationLight"
                 style="@style/SwitchStyle"
                 android:checked="false"
-                android:onClick="onClickLightNotification" />
+                android:onClick="onClickLightNotification"
+                android:background="?attr/selectableItemBackground" />
 
             <View
                 android:id="@id/divider"
@@ -60,7 +63,8 @@
                 android:id="@+id/switchNotificationVibrations"
                 android:checked="false"
                 style="@style/SwitchStyle"
-                android:onClick="onClickVibrationsNotification" />
+                android:onClick="onClickVibrationsNotification"
+                android:background="?attr/selectableItemBackground" />
 
             <View
                 android:id="@id/divider"
@@ -70,10 +74,11 @@
                 android:text="@string/notification_period"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewNotificationPeriods"
+                android:id="@+id/textViewNotificationPeriod"
                 style="@style/TextViewModerate"
                 android:clickable="true"
-                android:onClick="onClickNotificationPeriod" />
+                android:onClick="onClickNotificationPeriod"
+                android:background="?attr/selectableItemBackground" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

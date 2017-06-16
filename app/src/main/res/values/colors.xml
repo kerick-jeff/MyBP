@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">@color/teal_dark</color>
     <color name="colorAccent">@color/teal_dark</color>
     <color name="windowBackground">@android:color/white</color>
-    <color name="textColor">@color/textBlack</color>
+    <color name="textColor">#757575</color>
     <color name="textColorPrimary">@color/teal</color>
-    <color name="textColorSecondary">@color/textBlack</color>
+    <color name="textColorSecondary">@color/textColor</color>
     <color name="iconTint">@color/teal</color>
     <color name="listDivider">@color/teal_light</color>
     <color name="itemBackground">@color/teal_light</color>
@@ -14,22 +14,25 @@
     <color name="splash">@android:color/white</color>
 
     <!-- MyBP color set -->
+    <color name="white_overlay">#F3F3F3</color>
     <color name="teal_light">#B2DFDB</color>
     <color name="teal">#009688</color>
     <color name="teal_dark">#00695C</color>
     <color name="textBlack">#263238</color>
-    <color name="red">#F44336</color>
-    <color name="red_deep">#D32F2F</color>
-    <color name="yellow">#FBC02D</color>
+    <color name="red_light">#FF8A80</color>
+    <color name="red">#ff5252</color>
+    <color name="red_deep">#F44336</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="yellow_deep">#FBC02D</color>
+    <color name="green_light">#B9F6CA</color>
     <color name="green">#4CAF50</color>
-    <color name="brick_red">#ff5252</color>
-    <color name="gray">#ccc</color>
+    <color name="green_deep">#388E3C</color>
+    <color name="blue_light">#82B1FF</color>
+    <color name="blue">#2196F3</color>
+    <color name="blue_deep">#1976D2</color>
     <color name="gray_light">#f4f4f4</color>
-
-    <!-- MyBP status set -->
-    <color name="success">@color/green</color>
-    <color name="info">#2196F3</color>
-    <color name="warning">@color/yellow</color>
-    <color name="danger">@color/red_deep</color>
+    <color name="gray">#ccc</color>
+    <color name="darkGray">#727272</color>
+    <color name="fab_ripple">#99FFFFFF</color>
 
 </resources>

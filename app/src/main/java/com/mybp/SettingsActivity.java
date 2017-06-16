@@ -4,14 +4,26 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class SettingsActivity extends AppCompatActivity {
     private SharedPreferences preferences;
@@ -25,6 +37,7 @@ public class SettingsActivity extends AppCompatActivity {
     // Views to be updated
     private Switch switchProfile;
     private Switch switchGoogle;
+    private TextView textViewNotifications;
     private Switch switchCurrency;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +72,24 @@ public class SettingsActivity extends AppCompatActivity {
     private void referenceViews() {
         switchProfile = (Switch) findViewById(R.id.switchProfile);
         switchGoogle = (Switch) findViewById(R.id.switchGoogle);
+        textViewNotifications = (TextView) findViewById(R.id.textViewNotifications);
         switchCurrency = (Switch) findViewById(R.id.switchCurrency);
+
+        String profile = getResources().getString(R.string.profile);
+        String profileSub = getResources().getString(R.string.profile_sub);
+        Span.span(profile, profileSub, switchProfile);
+
+        String profileGoogle = getResources().getString(R.string.profile_google);
+        String profileGoogleSub = getResources().getString(R.string.profile_google_sub);
+        Span.span(profileGoogle, profileGoogleSub, switchGoogle);
+
+        String notification = getResources().getString(R.string.notification);
+        String notificationSub = getResources().getString(R.string.notification_sub);
+        Span.span(notification, notificationSub, textViewNotifications);
+
+        String currency = getResources().getString(R.string.currency);
+        String currencySub = getResources().getString(R.string.currency_sub);
+        Span.span(currency, currencySub, switchCurrency);
     }
 
     private void updateViews() {

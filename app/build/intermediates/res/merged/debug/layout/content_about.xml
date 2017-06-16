@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
+    android:layout_height="match_parent">
 
     <android.support.v4.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <TextView
                 android:text="@string/app_name"
                 android:layout_width="wrap_content"
@@ -21,52 +22,72 @@
                 android:id="@+id/textViewAppName"
                 android:textStyle="bold"
                 android:textSize="30sp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
                 android:textColor="@color/teal"
-                android:typeface="sans" />
+                android:typeface="sans"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imageViewIcon"
+                android:contentDescription="@string/app_icon_desc"
+                android:layout_gravity="center" />
 
             <TextView
                 android:text="@string/versionName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imageViewIcon"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
                 android:id="@+id/textView"
                 android:textStyle="normal|bold|italic"
-                android:textColor="@color/teal" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginTop="16dp"
-                android:id="@+id/imageViewIcon"
-                android:contentDescription="@string/app_icon_desc"
-                android:layout_below="@+id/textViewAppName"
-                android:layout_centerHorizontal="true" />
+                android:textColor="@color/teal"
+                android:gravity="center"
+                android:layout_gravity="center" />
 
             <TextView
                 android:text="@string/app_about_mybp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView"
-                android:layout_marginTop="15dp"
                 android:id="@+id/textViewDescription"
-                android:padding="20dp" />
+                android:layout_gravity="center" />
 
-        </RelativeLayout>
+        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <android.support.design.widget.FloatingActionButton
+    <View
+        android:id="@+id/viewDimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:alpha="0"
+        android:visibility="gone" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fabMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_bubble_chart_white_24dp"
-        android:id="@+id/floatingActionButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="@dimen/fab_margin"
-        app:fabSize="normal" />
+        android:layout_gravity="bottom|end"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        fab:menu_icon="@drawable/ic_bubble_chart_white_24dp"
+        fab:menu_showShadow="true"
+        fab:menu_colorNormal="@color/colorPrimaryDark"
+        fab:menu_colorPressed="@color/colorPrimary"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_labels_colorNormal="#333333"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_position="left"
+        fab:menu_openDirection="up"
+        fab:fab_shadowColor="#66000000"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true">
 
-</RelativeLayout>
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -55,7 +55,7 @@ public class ExpensesPlanTable extends DatabaseTable {
     }
 
     @Override
-    public boolean insert() {
+    public long insert() {
         SQLiteDatabase database = DatabaseHelper.getInstance(DatabaseHelper.getDhContext()).getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -68,9 +68,8 @@ public class ExpensesPlanTable extends DatabaseTable {
         values.put(GADGETS, getGadgets());
         values.put(ACTIVITIES, getActivities());
         values.put(RELAXATION, getRelaxation());
-        database.insert(name, null, values);
 
-        return true;
+        return database.insert(name, null, values);
     }
 
     public long getId() {

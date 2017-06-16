@@ -112,12 +112,12 @@
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/fab_bg_mini.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.getbase/floatingactionbutton/1.10.0/res/drawable-xhdpi-v4/fab_bg_mini.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
@@ -174,6 +174,10 @@
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_black_36dp.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/fab_add.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/res/drawable-xhdpi-v4/fab_add.png"
     },
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png",

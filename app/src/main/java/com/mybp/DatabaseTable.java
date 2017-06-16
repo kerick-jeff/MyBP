@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.support.v4.app.Fragment;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -58,12 +59,12 @@ public abstract class DatabaseTable {
 
     protected Cursor findAll() {
         SQLiteDatabase database = DatabaseHelper.getInstance(DatabaseHelper.getDhContext()).getReadableDatabase();
-        Cursor results = database.rawQuery("SELECT * FROM " + name, null);
+        Cursor results = database.rawQuery("SELECT * FROM " + name + " ORDER BY _id DESC", null);
         results.moveToFirst();
         return results;
     }
 
-    protected abstract boolean insert();
+    protected abstract long insert();
 
     protected boolean delete(int id) {
         int deleted = -1;
@@ -91,13 +92,7 @@ public abstract class DatabaseTable {
         executeAsyncTask(new FindTask(), id);
     }
 
-    public void executeFindAllTask(Context context, String[] colIndices, PlansMasterFragment fragment) {
-        executeAsyncTask(new FindAllTask(context, colIndices, fragment));
-    }
 
-    public void executeInsertTask(Context context, DatabaseTable databaseTable, String postString) {
-        executeAsyncTask(new InsertTask(context, databaseTable, postString));
-    }
 
     public void executeDeleteTask(int id) {
         executeAsyncTask(new DeleteTask(), id);
@@ -110,82 +105,90 @@ public abstract class DatabaseTable {
         }
     }
 
-    private class FindAllTask extends AsyncTask <Void, Void, ArrayList<String> > {
-        private Context context;
-        private String[] colIndices;
-        private ListMasterFragment fragment;
+    /*
+     * Defines the logic for finding all objects of a specific type or table from the database
+     * executeFindAllTask(...) : a method allows the execution of the FindAllTask
+     * FindAllTask{...} : an AsyncTask that handles the findAll process
+     */
+    public FindAllTask executeFindAllTask() {
+        FindAllTask findAllTask = new FindAllTask();
+        executeAsyncTask(findAllTask);
 
-        public FindAllTask(Context context,String[] colIndices, ListMasterFragment fragment) {
-            this.context = context;
-            this.colIndices = colIndices;
-            this.fragment = fragment;
+        return findAllTask;
+    }
+
+    public class FindAllTask extends AsyncTask <Void, Void, Cursor > {
+        public FindAllTaskResponse findAllTaskResponse;
+
+        public FindAllTask() {
+            this.findAllTaskResponse = null;
         }
 
         @Override
-        public ArrayList<String> doInBackground(Void... params) {
-            Cursor results = findAll();
-            ArrayList< String > planDefinitions = new ArrayList< String >();
+        public Cursor doInBackground(Void... params) {
+            return findAll();
+        }
 
-            int rowNum = 1;
-            while (!results.isAfterLast()) {
-                String planDefinition = String.format("%02d\n", rowNum);
-                for (int colIndex = 0; colIndex < colIndices.length; colIndex++) {
-                    if(colIndex == colIndices.length - 1) {
-                        planDefinition += DateUtils.formatDateTime(context, results.getLong(results.getColumnIndex(colIndices[colIndex])), DateUtils.FORMAT_SHOW_DATE|DateUtils.FORMAT_SHOW_TIME);
-                        break;
-                    }
-                    planDefinition += results.getString(results.getColumnIndex(colIndices[colIndex])) + "\n";
-                }
-                planDefinitions.add(planDefinition);
-                results.moveToNext();
-                rowNum++;
+        @Override
+        public void onPostExecute(Cursor results) {
+            if(findAllTaskResponse != null) {
+                findAllTaskResponse.findAllTaskFinished(results);
             }
-
-            return planDefinitions;
-        }
-
-        @Override
-        public void onPostExecute(ArrayList<String> planDefinitions) {
-           // SimpleCursorAdapter adapter = new SimpleCursorAdapter(context, android.R.layout.simple_list_item_1, results, new String[]{colIndexTitle}, new int[]{android.R.id.text1}, 0);
-
-            ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, android.R.id.text1, planDefinitions);
-            fragment.setListAdapter(adapter);
-            fragment.getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-            fragment.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    if(fragment.getOnPlansSelectedListener() != null) {
-                        fragment.getOnPlansSelectedListener().onItemSelected(((TextView) view).getText().toString());
-                    }
-                }
-            });
         }
     }
 
-    private class InsertTask extends AsyncTask < Void, Void, Void > {
+    public interface FindAllTaskResponse {
+        void findAllTaskFinished(Cursor results);
+    }
+    /*** $FindAll ***/
+
+    /*
+     * Defines the logic that takes place when an item is being inserted into the database
+     * executeInsertTask(...) : a method allows the execution of the InsertTask
+     * InsertTask{...} : an AsyncTask that handles the insert process
+     * InsertTaskResponse {...} : an interface for passing the insertedId to a ui process
+     */
+    public InsertTask executeInsertTask(final Context context, DatabaseTable databaseTable, String postString) {
+        InsertTask insertTask = new InsertTask(context, databaseTable, postString);
+        executeAsyncTask(insertTask);
+
+        return insertTask;
+    }
+
+    public class InsertTask extends AsyncTask < Void, Void, Long > {
         private Context context;
         private DatabaseTable databaseTable;
         private String postString;
+        public InsertTaskResponse insertTaskResponse;
 
         public InsertTask(Context context, DatabaseTable databaseTable, String postString) {
             this.context = context;
             this.databaseTable = databaseTable;
             this.postString = postString;
+            this.insertTaskResponse = null;
         }
 
         @Override
-        public Void doInBackground(Void... params) {
-            databaseTable.insert();
-            return null;
+        public Long doInBackground(Void... params) {
+            return databaseTable.insert();
         }
 
         @Override
-        public void onPostExecute(Void nothing) {
-            if (!postString.equals(null) && !postString.equals("")) {
+        public void onPostExecute(Long lastId) {
+            if (postString != null && !postString.equals("")) {
                 Toast.makeText(context, postString, Toast.LENGTH_LONG).show();
+            }
+
+            if(insertTaskResponse != null) {
+                insertTaskResponse.insertTaskFinished(lastId);
             }
         }
     }
+
+    public interface InsertTaskResponse {
+        void insertTaskFinished(long insertedId);
+    }
+    /*** $Insert ***/
 
     private class DeleteTask extends AsyncTask < Integer, Void, Boolean > {
         @Override

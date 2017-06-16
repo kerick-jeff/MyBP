@@ -2,19 +2,19 @@
 manifest
 ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:2:1-88:12
 	package
-		ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:4:5-23
+		ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:3:5-23
 		INJECTED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml
-	xmlns:tools
-		ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:3:5-51
 	xmlns:android
 		ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
 		INJECTED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml
+	android:installLocation
+		ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:4:5-45
 uses-permission#android.permission.INTERNET
 ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:6:5-67
 	android:name
@@ -42,6 +42,7 @@ MERGED from [com.android.support:animated-vector-drawable:25.0.1] /home/kerick/A
 MERGED from [com.android.support:transition:25.0.1] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/AndroidManifest.xml:22:5-20
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.getbase:floatingactionbutton:1.10.0] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.getbase/floatingactionbutton/1.10.0/AndroidManifest.xml:12:5-20
+MERGED from [com.github.clans:fab:1.6.4] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/AndroidManifest.xml:12:5-20
 	android:label
 		ADDED from /home/kerick/AndroidStudioProjects/MyBP/app/src/main/AndroidManifest.xml:13:9-41
 	android:supportsRtl
@@ -172,6 +173,7 @@ MERGED from [com.android.support:recyclerview-v7:25.0.1] /home/kerick/AndroidStu
 MERGED from [com.android.support:transition:25.0.1] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:2.1.0] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.getbase:floatingactionbutton:1.10.0] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.getbase/floatingactionbutton/1.10.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.clans:fab:1.6.4] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.0.1] /home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion

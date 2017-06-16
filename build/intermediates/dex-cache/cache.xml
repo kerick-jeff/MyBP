@@ -2,175 +2,211 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_1bed3a633b43b5a5d35df8d8209ce0a520961854.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/home/kerick/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_6f44508425bc5f53172f7a3a7076ccc8b7dd596a.jar" />
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.1_6f44508425bc5f53172f7a3a7076ccc8b7dd596a/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.1_ca2a8b4463a9116f31125adea8af49bd12854b82.jar" />
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.1_ca2a8b4463a9116f31125adea8af49bd12854b82/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.1_d43047872d69efd951d17282f4b7f2ac0d419b5d.jar" />
+        sha1="7b3c24f696f6310d44e0b2ca4a1fbb5a7589d516">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_91bdad364caaae8a9e74da0e615e6c134dd32cb5/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.0.1_dd96bd2a6c56149e950ae666199e439918edec7d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_7d81e493929268e3c7e1962aed6aa66ff7660a85.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_9a4659b17567af28f75873ecc4b43f8999a25025.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_24b1966c388afeac127e8197580e6077c67ffd15.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_5d940d34a518873714b31a300d54122046dd4f3e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-2.1.0_29452c8a9d89d9c2f96f66713a1f59a429bb087f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_290c253a4af7a83f048b0e02ad255b3cf47222c9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_a5fb70d413cbb4d51375d1d831cfb8e33d876b86.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.1"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_0b484441cca76a1788078f0d4280091809c31d61.jar" />
-    </item>
-    <item
-        is-multidex="false"
+        is-multidex="true"
         jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_56963984371fec708a6d85f683380eabc81292dd.jar" />
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.1_56963984371fec708a6d85f683380eabc81292dd/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.getbase/floatingactionbutton/1.10.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_9fe9dcb0596c037f7cfcbce53b6d9e24b9a94062.jar" />
+        sha1="078cad8ebaa25b1eb1790bd622b3a8ae27c9cc7a">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.getbase-floatingactionbutton-1.10.0_9ec6c6a93947d8e67982ce15ca91e8e402821002/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_00397eab1a7940de072f333d45b6dc4829281234.jar" />
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.1_9a4659b17567af28f75873ecc4b43f8999a25025/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.1_0b484441cca76a1788078f0d4280091809c31d61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.clans-fab-1.6.4_2d1313fcb18db3583888b3f69932250c99f6a4ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.1_d43047872d69efd951d17282f4b7f2ac0d419b5d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_7d81e493929268e3c7e1962aed6aa66ff7660a85/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.1_1bed3a633b43b5a5d35df8d8209ce0a520961854/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_4789ef655dc873cf183ad043b1fdb76cf1ab3a6a.jar" />
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_4789ef655dc873cf183ad043b1fdb76cf1ab3a6a/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="27a7e90e41564f4aa82bb7f448bed9de0af30c2a">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a529cccf50661f3a7387bf006a16aae21a19f1ab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_9fe9dcb0596c037f7cfcbce53b6d9e24b9a94062/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.0.1_dddcb328ad23e1a5bad38c3121a7780803a8519f.jar" />
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.0.1_dddcb328ad23e1a5bad38c3121a7780803a8519f/classes.dex" />
     </item>
     <item
-        is-multidex="false"
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_24b1966c388afeac127e8197580e6077c67ffd15/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.1_dd96bd2a6c56149e950ae666199e439918edec7d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.1_00397eab1a7940de072f333d45b6dc4829281234/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.1_5d940d34a518873714b31a300d54122046dd4f3e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.1_a5fb70d413cbb4d51375d1d831cfb8e33d876b86/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.1_290c253a4af7a83f048b0e02ad255b3cf47222c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-2.1.0_29452c8a9d89d9c2f96f66713a1f59a429bb087f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         optimize="true"
         revision="25.0.1"
         sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_f57f03a0d1a1d46f1732706dedb5c3436f9ab0dd.jar" />
+        <dex dex="/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.1_f57f03a0d1a1d46f1732706dedb5c3436f9ab0dd/classes.dex" />
     </item>
 
 </items>

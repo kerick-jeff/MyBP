@@ -32,6 +32,18 @@
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_assignment_grey_700_24dp.png"
     },
     {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_assignment_white_24dp.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_assignment_white_24dp.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_attach_money_white_24dp.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_attach_money_white_24dp.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_facebook.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_action_facebook.png"
+    },
+    {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_email_red_600_24dp.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_email_red_600_24dp.png"
     },
@@ -40,8 +52,16 @@
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_help_grey_700_24dp.png"
     },
     {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_email_white_24dp.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_email_white_24dp.png"
+    },
+    {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_arrow_back_white_24dp.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_arrow_back_white_24dp.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_money_off_white_24dp.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_money_off_white_24dp.png"
     },
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_save_white_24dp.png",
@@ -58,6 +78,10 @@
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_money_off_grey_700_24dp.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_money_off_grey_700_24dp.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_mail_outline_red_400_24dp.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_mail_outline_red_400_24dp.png"
     },
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_more_horiz_green_500_24dp.png",
@@ -94,6 +118,10 @@
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_close_white_24dp.png",
         "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_close_white_24dp.png"
+    },
+    {
+        "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_action_twitter.png",
+        "source": "/home/kerick/AndroidStudioProjects/MyBP/app/src/main/res/drawable-xxhdpi/ic_action_twitter.png"
     },
     {
         "merged": "/home/kerick/AndroidStudioProjects/MyBP/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_add_white_24dp.png",

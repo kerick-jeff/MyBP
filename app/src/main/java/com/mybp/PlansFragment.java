@@ -65,12 +65,33 @@ public class PlansFragment extends Fragment {
             fragmentTransaction.commit();
         }
 
-        plansMasterFragment.setOnPlansSelectedListener(new PlansMasterFragment.OnPlansSelectedListener() {
+        /*plansMasterFragment.setOnPlanClickedListener(new PlansMasterFragment.OnPlanClickedListener() {
             @Override
-            public void onItemSelected(String planDescription) {
-                sendPlanDescription(planDescription);
+            public void onPlanClicked(String description) {
+                sendPlanDescription(description);
             }
-        });
+        });*/
+    }
+
+    private void sendPlan(String planDescription) {
+        PlansDetailFragment plansDetailFragment;
+        if (dualPane) {
+            //Two pane layout
+            plansDetailFragment = (PlansDetailFragment) getFragmentManager().findFragmentById(R.id.frameLayoutDetail);
+            plansDetailFragment.showSelectedPlan(planDescription);
+        } else {
+            // Single pane layout
+            plansDetailFragment = new PlansDetailFragment();
+
+            Bundle bundle = new Bundle();
+            bundle.putString(PlansDetailFragment.KEY_PLAN_DESCRIPTION, planDescription);
+            plansDetailFragment.setArguments(bundle);
+
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, plansDetailFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
     }
 
     private void sendPlanDescription(String planDescription) {

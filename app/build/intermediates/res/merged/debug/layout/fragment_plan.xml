@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mybp.PlanFragment">
+    tools:context="com.mybp.PlanFragment"
+    android:id="@+id/relativeLayoutPlan">
 
     <include
         android:layout_width="match_parent"

@@ -1,9 +1,8 @@
 package com.mybp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -16,9 +15,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     NavigationView navigationView = null;
     Toolbar toolbar = null;
+    FloatingActionMenu fabMenu;
+    FloatingActionButton fabPlan, fabIncome, fabExpenses;
+    View viewDimmer;
+
     private String lastActiveFragment = null;
     static final String LAST_ACTIVE_FRAGMENT = "LAST_ACTIVE_FRAGMENT";
 
@@ -42,15 +48,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar.setTitle("Dashboard");
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -59,6 +56,130 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_dashboard);
+
+        /* Setup Floating action button */
+        viewDimmer = (View) findViewById(R.id.viewDimmer);
+        fabMenu = (FloatingActionMenu) findViewById(R.id.fabMenu);
+
+        viewDimmer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fabMenu.close(true);
+            }
+        });
+
+        fabMenu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
+            @Override
+            public void onMenuToggle(boolean opened) {
+                if(opened) { // build FloatingActionMenu & FloatingActionButton(s) dynamically at runtime
+                    fabPlan = new FloatingActionButton(MainActivity.this);
+                    fabPlan.setLabelText(getResources().getString(R.string.nav_plan));
+                    fabPlan.setImageDrawable(getResources().getDrawable(R.drawable.ic_assignment_white_24dp));
+                    fabPlan.setButtonSize(FloatingActionButton.SIZE_MINI);
+                    fabPlan.setColorNormal(getResources().getColor(R.color.blue));
+                    fabPlan.setColorPressed(getResources().getColor(R.color.blue_deep));
+                    fabPlan.setColorRipple(getResources().getColor(R.color.fab_ripple));
+                    fabPlan.setShowShadow(true);
+                    fabPlan.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            toolbar.setTitle("Create Plan");
+                            lastActiveFragment = "PlanFragment";
+
+                            PlanFragment planFragment = new PlanFragment();
+                            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.fragment_container, planFragment);
+                            fragmentTransaction.commit();
+
+                            navigationView.setCheckedItem(R.id.nav_plan); // navigation view updates selected item
+                            fabMenu.close(true);
+                        }
+                    });
+
+                    fabIncome = new FloatingActionButton(MainActivity.this);
+                    fabIncome.setLabelText(getResources().getString(R.string.nav_income));
+                    fabIncome.setImageDrawable(getResources().getDrawable(R.drawable.ic_attach_money_white_24dp));
+                    fabIncome.setButtonSize(FloatingActionButton.SIZE_MINI);
+                    fabIncome.setColorNormal(getResources().getColor(R.color.green));
+                    fabIncome.setColorPressed(getResources().getColor(R.color.green_deep));
+                    fabIncome.setColorRipple(getResources().getColor(R.color.fab_ripple));
+                    fabIncome.setShowShadow(true);
+                    fabIncome.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            toolbar.setTitle("Income");
+                            lastActiveFragment = "IncomeFragment";
+
+                            IncomeFragment incomeFragment = new IncomeFragment();
+                            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.fragment_container, incomeFragment);
+                            fragmentTransaction.commit();
+
+                            navigationView.setCheckedItem(R.id.nav_income);
+                            fabMenu.close(true);
+                        }
+                    });
+
+                    fabExpenses = new FloatingActionButton(MainActivity.this);
+                    fabExpenses.setLabelText(getResources().getString(R.string.nav_expenses));
+                    fabExpenses.setImageDrawable(getResources().getDrawable(R.drawable.ic_money_off_white_24dp));
+                    fabExpenses.setButtonSize(FloatingActionButton.SIZE_MINI);
+                    fabExpenses.setColorNormal(getResources().getColor(R.color.red));
+                    fabExpenses.setColorPressed(getResources().getColor(R.color.red_deep));
+                    fabExpenses.setColorRipple(getResources().getColor(R.color.fab_ripple));
+                    fabExpenses.setShowShadow(true);
+                    fabExpenses.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            toolbar.setTitle("Expenses");
+                            lastActiveFragment = "ExpensesFragment";
+
+                            ExpensesFragment expensesFragment = new ExpensesFragment();
+                            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                            fragmentTransaction.replace(R.id.fragment_container, expensesFragment);
+                            fragmentTransaction.commit();
+
+                            navigationView.setCheckedItem(R.id.nav_expenses);
+                            fabMenu.close(true);
+                        }
+                    });
+
+                    fabMenu.addMenuButton(fabPlan);
+                    fabMenu.addMenuButton(fabIncome);
+                    fabMenu.addMenuButton(fabExpenses);
+                } else {
+                    fabMenu.removeAllMenuButtons();
+                }
+
+                setBackgroundDimming(opened);
+            }
+
+            private void setBackgroundDimming(boolean dimmed) {
+                final float targetAlpha = dimmed ? 1f : 0;
+                final int endVisibility = dimmed ? View.VISIBLE : View.GONE;
+                viewDimmer.setVisibility(View.VISIBLE);
+                viewDimmer.animate()
+                        .alpha(targetAlpha)
+                        .withEndAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                viewDimmer.setVisibility(endVisibility);
+                            }
+                        })
+                        .start();
+            }
+        });
+
+        fabMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(fabMenu.isOpened()) {
+                    fabMenu.close(true);
+                }
+            }
+        });
+        /* End fab setup */
     }
 
     @Override

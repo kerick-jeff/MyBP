@@ -46,7 +46,7 @@ public class IncomePlanTable extends DatabaseTable {
     }
 
     @Override
-    public boolean insert() {
+    public long insert() {
         SQLiteDatabase database = DatabaseHelper.getInstance(DatabaseHelper.getDhContext()).getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -56,9 +56,8 @@ public class IncomePlanTable extends DatabaseTable {
         values.put(INTEREST, getInterest());
         values.put(PROFIT, getProfit());
         values.put(RENTS, getRents());
-        database.insert(name, null, values);
 
-        return true;
+        return database.insert(name, null, values);
     }
 
     public long getId() {

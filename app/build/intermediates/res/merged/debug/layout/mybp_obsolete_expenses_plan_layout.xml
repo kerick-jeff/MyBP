@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@string/income_expenses_index"
+        android:id="@+id/textViewIndex"
+        style="@style/TextViewPlansNumberObsoleteExpenses"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="@string/income_expenses_description"
+            android:id="@+id/textViewDescription"
+            style="@style/TextViewPlansObsoleteExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|start" />
+
+        <TextView
+            android:text="@string/income_expenses_expired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewExpired"
+            android:textColor="@color/red_light"
+            android:gravity="end"
+            android:paddingEnd="12dp"
+            android:paddingTop="5dp"
+            android:padding="0dp"
+            android:paddingStart="12dp" />
+    </LinearLayout>
+
+</LinearLayout>
+

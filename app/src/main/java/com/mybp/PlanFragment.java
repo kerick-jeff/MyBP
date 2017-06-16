@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AlertDialog;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
@@ -19,6 +20,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -88,14 +91,14 @@ public class PlanFragment extends Fragment {
         public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
             if(isButtonFrom
                     && (year < calendar.get(Calendar.YEAR)
-                    || (year == calendar.get(Calendar.YEAR) && month < calendar.get(Calendar.MONTH))
-                    || (year == calendar.get(Calendar.YEAR) && month == calendar.get(Calendar.MONTH) && dayOfMonth < calendar.get(Calendar.DAY_OF_MONTH)))) {
+                    || (year >= calendar.get(Calendar.YEAR) && month < calendar.get(Calendar.MONTH))
+                    || (year >= calendar.get(Calendar.YEAR) && month >= calendar.get(Calendar.MONTH) && dayOfMonth < calendar.get(Calendar.DAY_OF_MONTH)))) {
                 Toast.makeText(getActivity(), "Sorry! Date must not be of the past", Toast.LENGTH_LONG).show();
                 return;
             } else if(!isButtonFrom
                     && (year < calendar.get(Calendar.YEAR)
-                    || (year == calendar.get(Calendar.YEAR) && month < calendar.get(Calendar.MONTH))
-                    || (year == calendar.get(Calendar.YEAR) && month == calendar.get(Calendar.MONTH) && dayOfMonth <= calendar.get(Calendar.DAY_OF_MONTH)))) {
+                    || (year >= calendar.get(Calendar.YEAR) && month < calendar.get(Calendar.MONTH))
+                    || (year >= calendar.get(Calendar.YEAR) && month >= calendar.get(Calendar.MONTH) && dayOfMonth <= calendar.get(Calendar.DAY_OF_MONTH)))) {
                 Toast.makeText(getActivity(), "Sorry! A future date is required", Toast.LENGTH_LONG).show();
                 return;
             }
@@ -133,6 +136,8 @@ public class PlanFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        referenceViews();
 
         editTextTitle = (EditText) getView().findViewById(R.id.editTextTitle);
         spinnerType = (Spinner) getView().findViewById(R.id.spinnerType);
@@ -185,7 +190,6 @@ public class PlanFragment extends Fragment {
             }
         });
 
-        referenceViews();
     }
 
     private boolean activateCreate() {
@@ -304,7 +308,7 @@ public class PlanFragment extends Fragment {
 
     private void onClickCreate() {
         if (activateCreate()) {
-            PlanTable newPlan = new PlanTable();
+            final PlanTable newPlan = new PlanTable();
             newPlan.setTitle(editTextTitle.getText().toString());
             newPlan.setType(spinnerType.getSelectedItem().toString());
             newPlan.setFrom(from);
@@ -312,59 +316,80 @@ public class PlanFragment extends Fragment {
             long now = Calendar.getInstance().getTimeInMillis();
             newPlan.setCreated(now);
             newPlan.setUpdated(now);
-            newPlan.executeInsertTask(getActivity(), newPlan, "Plan created");
+            DatabaseTable.InsertTask newPlanInsertTask = newPlan.executeInsertTask(getActivity(), newPlan, "Plan created");
+            newPlanInsertTask.insertTaskResponse = new DatabaseTable.InsertTaskResponse() {
+                @Override
+                public void insertTaskFinished(long insertedId) {
+                    /*Cursor result = newPlan.findByQuery("SELECT " + PlanTable.ID + " FROM " + newPlan.name);
+                    result.moveToLast();
+                    long newPlanId = result.getLong(result.getColumnIndex(PlanTable.ID));*/
+                    IncomePlanTable newIncomePlan = new IncomePlanTable();
+                    ExpensesPlanTable newExpensesPlan = new ExpensesPlanTable();
+                    switch (newPlan.getType()) {
+                        case "Income Plan":
+                            newIncomePlan.setPlanId(insertedId);
+                            newIncomePlan.setSalary(editTextSalary.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextSalary.getText().toString()));
+                            newIncomePlan.setDividends(editTextDividends.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextDividends.getText().toString()));
+                            newIncomePlan.setInterest(editTextInterests.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextInterests.getText().toString()));
+                            newIncomePlan.setProfit(editTextProfit.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextProfit.getText().toString()));
+                            newIncomePlan.setRents(editTextRents.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRents.getText().toString()));
+                            newIncomePlan.executeInsertTask(getActivity(), newIncomePlan, null);
+                            break;
+                        case "Expenses Plan":
+                            newExpensesPlan.setPlanId(insertedId);
+                            newExpensesPlan.setFood(editTextFood.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextFood.getText().toString()));
+                            newExpensesPlan.setHealth(editTextHealth.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHealth.getText().toString()));
+                            newExpensesPlan.setClothes(editTextClothes.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextClothes.getText().toString()));
+                            newExpensesPlan.setHousehold(editTextHousehold.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHousehold.getText().toString()));
+                            newExpensesPlan.setGadgets(editTextGadgets.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextGadgets.getText().toString()));
+                            newExpensesPlan.setActivities(editTextActivities.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextActivities.getText().toString()));
+                            newExpensesPlan.setRelaxation(editTextRelaxation.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRelaxation.getText().toString()));
+                            newExpensesPlan.executeInsertTask(getActivity(), newExpensesPlan, null);
+                            break;
+                        default:
+                            newIncomePlan.setPlanId(insertedId);
+                            newIncomePlan.setSalary(editTextSalary.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextSalary.getText().toString()));
+                            newIncomePlan.setDividends(editTextDividends.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextDividends.getText().toString()));
+                            newIncomePlan.setInterest(editTextInterests.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextInterests.getText().toString()));
+                            newIncomePlan.setProfit(editTextProfit.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextProfit.getText().toString()));
+                            newIncomePlan.setRents(editTextRents.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRents.getText().toString()));
+                            newIncomePlan.executeInsertTask(getActivity(), newIncomePlan, null);
 
-            Cursor result = newPlan.findByQuery("SELECT " + PlanTable.ID + " FROM " + newPlan.name);
-            result.moveToLast();
-            long newPlanId = result.getLong(result.getColumnIndex(PlanTable.ID));
+                            newExpensesPlan.setPlanId(insertedId);
+                            newExpensesPlan.setFood(editTextFood.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextFood.getText().toString()));
+                            newExpensesPlan.setHealth(editTextHealth.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHealth.getText().toString()));
+                            newExpensesPlan.setClothes(editTextClothes.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextClothes.getText().toString()));
+                            newExpensesPlan.setHousehold(editTextHousehold.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHousehold.getText().toString()));
+                            newExpensesPlan.setGadgets(editTextGadgets.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextGadgets.getText().toString()));
+                            newExpensesPlan.setActivities(editTextActivities.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextActivities.getText().toString()));
+                            newExpensesPlan.setRelaxation(editTextRelaxation.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRelaxation.getText().toString()));
+                            newExpensesPlan.executeInsertTask(getActivity(), newExpensesPlan, null);
+                            break;
+                    }
+                }
+            };
 
-            IncomePlanTable newIncomePlan = new IncomePlanTable();
-            ExpensesPlanTable newExpensesPlan = new ExpensesPlanTable();
-
-            switch (newPlan.getType()) {
-                case "Income Plan":
-                    Toast.makeText(getActivity(), "" + newPlanId, Toast.LENGTH_LONG).show();
-                    newIncomePlan.setPlanId(newPlanId);
-                    newIncomePlan.setSalary(editTextSalary.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextSalary.getText().toString()));
-                    newIncomePlan.setDividends(editTextDividends.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextDividends.getText().toString()));
-                    newIncomePlan.setInterest(editTextInterests.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextInterests.getText().toString()));
-                    newIncomePlan.setProfit(editTextProfit.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextProfit.getText().toString()));
-                    newIncomePlan.setRents(editTextRents.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRents.getText().toString()));
-                    newIncomePlan.executeInsertTask(getActivity(), newIncomePlan, null);
-                    break;
-                case "Expenses Plan":
-                    newExpensesPlan.setPlanId(newPlanId);
-                    newExpensesPlan.setFood(editTextFood.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextFood.getText().toString()));
-                    newExpensesPlan.setHealth(editTextHealth.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHealth.getText().toString()));
-                    newExpensesPlan.setClothes(editTextClothes.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextClothes.getText().toString()));
-                    newExpensesPlan.setHousehold(editTextHousehold.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHousehold.getText().toString()));
-                    newExpensesPlan.setGadgets(editTextGadgets.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextGadgets.getText().toString()));
-                    newExpensesPlan.setActivities(editTextActivities.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextActivities.getText().toString()));
-                    newExpensesPlan.setRelaxation(editTextRelaxation.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRelaxation.getText().toString()));
-                    newExpensesPlan.executeInsertTask(getActivity(), newExpensesPlan, null);
-                    break;
-                default:
-                    newIncomePlan.setPlanId(newPlanId);
-                    newIncomePlan.setSalary(editTextSalary.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextSalary.getText().toString()));
-                    newIncomePlan.setDividends(editTextDividends.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextDividends.getText().toString()));
-                    newIncomePlan.setInterest(editTextInterests.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextInterests.getText().toString()));
-                    newIncomePlan.setProfit(editTextProfit.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextProfit.getText().toString()));
-                    newIncomePlan.setRents(editTextRents.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRents.getText().toString()));
-                    newIncomePlan.executeInsertTask(getActivity(), newIncomePlan, null);
-
-                    newExpensesPlan.setPlanId(newPlanId);
-                    newExpensesPlan.setFood(editTextFood.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextFood.getText().toString()));
-                    newExpensesPlan.setHealth(editTextHealth.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHealth.getText().toString()));
-                    newExpensesPlan.setClothes(editTextClothes.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextClothes.getText().toString()));
-                    newExpensesPlan.setHousehold(editTextHousehold.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextHousehold.getText().toString()));
-                    newExpensesPlan.setGadgets(editTextGadgets.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextGadgets.getText().toString()));
-                    newExpensesPlan.setActivities(editTextActivities.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextActivities.getText().toString()));
-                    newExpensesPlan.setRelaxation(editTextRelaxation.getText().toString().equals("") ? 0.0 : Double.valueOf(editTextRelaxation.getText().toString()));
-                    newExpensesPlan.executeInsertTask(getActivity(), newExpensesPlan, null);
-                    break;
-            }
+            clearForm((ViewGroup) getView().findViewById(R.id.linearLayoutPlan));
         } else {
             Toast.makeText(getActivity(), "Please fill all necessary fields", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void clearForm(ViewGroup group) {
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View view = group.getChildAt(i);
+
+            if (view instanceof EditText) {
+                ((EditText)view).setText("");
+            }
+
+            if (view instanceof Button && view.getId() != R.id.buttonCreate) {
+                ((Button)view).setText(getResources().getString(R.string.choose_calendar));
+            }
+
+            if(view instanceof ViewGroup && (((ViewGroup)view).getChildCount() > 0)) {
+                clearForm((ViewGroup)view);
+            }
         }
     }
 
@@ -375,5 +400,12 @@ public class PlanFragment extends Fragment {
             to = varCalendar.getTimeInMillis();
         }
         button.setText(DateUtils.formatDateTime(getActivity(), varCalendar.getTimeInMillis(), DateUtils.FORMAT_SHOW_DATE));
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        DatabaseHelper.getInstance(DatabaseHelper.getDhContext()).getWritableDatabase().close();
     }
 }

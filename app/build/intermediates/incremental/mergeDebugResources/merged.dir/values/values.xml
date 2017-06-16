@@ -19,7 +19,9 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <color name="brick_red">#ff5252</color>
+    <color name="blue">#2196F3</color>
+    <color name="blue_deep">#1976D2</color>
+    <color name="blue_light">#82B1FF</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -32,7 +34,7 @@
     <color name="colorButtonNormal">@color/teal</color>
     <color name="colorPrimary">@color/teal</color>
     <color name="colorPrimaryDark">@color/teal_dark</color>
-    <color name="danger">@color/red_deep</color>
+    <color name="darkGray">#727272</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -48,15 +50,17 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <color name="fab_ripple">#99FFFFFF</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="gray">#ccc</color>
     <color name="gray_light">#f4f4f4</color>
     <color name="green">#4CAF50</color>
+    <color name="green_deep">#388E3C</color>
+    <color name="green_light">#B9F6CA</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="iconTint">@color/teal</color>
-    <color name="info">#2196F3</color>
     <color name="itemBackground">@color/teal_light</color>
     <color name="listDivider">@color/teal_light</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -82,8 +86,9 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <color name="red">#F44336</color>
-    <color name="red_deep">#D32F2F</color>
+    <color name="red">#ff5252</color>
+    <color name="red_deep">#F44336</color>
+    <color name="red_light">#FF8A80</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -91,7 +96,6 @@
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <color name="splash">@android:color/white</color>
-    <color name="success">@color/green</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
@@ -100,12 +104,13 @@
     <color name="teal_dark">#00695C</color>
     <color name="teal_light">#B2DFDB</color>
     <color name="textBlack">#263238</color>
-    <color name="textColor">@color/textBlack</color>
+    <color name="textColor">#757575</color>
     <color name="textColorPrimary">@color/teal</color>
-    <color name="textColorSecondary">@color/textBlack</color>
-    <color name="warning">@color/yellow</color>
+    <color name="textColorSecondary">@color/textColor</color>
+    <color name="white_overlay">#F3F3F3</color>
     <color name="windowBackground">@android:color/white</color>
-    <color name="yellow">#FBC02D</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="yellow_deep">#FBC02D</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
             
             <enum name="normal" value="0"/>
@@ -303,7 +308,7 @@
         </attr></declare-styleable>
     <declare-styleable name="DesignTheme"><attr format="reference" name="bottomSheetDialogTheme"/><attr format="reference" name="bottomSheetStyle"/><attr format="color" name="textColorError"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
-    <declare-styleable name="FloatingActionButton"><attr format="color" name="fab_colorPressed"/><attr format="color" name="fab_colorDisabled"/><attr format="color" name="fab_colorNormal"/><attr format="reference" name="fab_icon"/><attr format="enum" name="fab_size"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr format="string" name="fab_title"/><attr format="boolean" name="fab_stroke_visible"/><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="color" name="rippleColor"/><attr name="fabSize">
+    <declare-styleable name="FloatingActionButton"><attr format="color" name="fab_colorNormal"/><attr format="color" name="fab_colorPressed"/><attr format="color" name="fab_colorDisabled"/><attr format="color" name="fab_colorRipple"/><attr format="boolean" name="fab_showShadow"/><attr format="color" name="fab_shadowColor"/><attr format="dimension" name="fab_shadowRadius"/><attr format="dimension" name="fab_shadowXOffset"/><attr format="dimension" name="fab_shadowYOffset"/><attr format="enum" name="fab_size"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr format="reference" name="fab_showAnimation"/><attr format="reference" name="fab_hideAnimation"/><attr format="string" name="fab_label"/><attr format="dimension" name="fab_elevationCompat"/><attr format="color" name="fab_progress_color"/><attr format="color" name="fab_progress_backgroundColor"/><attr format="boolean" name="fab_progress_indeterminate"/><attr format="integer" name="fab_progress_max"/><attr format="integer" name="fab_progress"/><attr format="boolean" name="fab_progress_showBackground"/><attr format="reference" name="fab_icon"/><attr format="string" name="fab_title"/><attr format="boolean" name="fab_stroke_visible"/><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="color" name="rippleColor"/><attr name="fabSize">
             
             <enum name="auto" value="-1"/>
             
@@ -312,6 +317,7 @@
             <enum name="mini" value="1"/>
         </attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/></declare-styleable>
     <declare-styleable name="FloatingActionButton_Behavior_Layout"><attr format="boolean" name="behavior_autoHide"/></declare-styleable>
+    <declare-styleable name="FloatingActionMenu"><attr format="boolean" name="menu_showShadow"/><attr format="dimension" name="menu_buttonSpacing"/><attr format="dimension" name="menu_labels_margin"/><attr format="reference" name="menu_labels_showAnimation"/><attr format="reference" name="menu_labels_hideAnimation"/><attr format="dimension" name="menu_labels_paddingTop"/><attr format="dimension" name="menu_labels_paddingLeft"/><attr format="dimension" name="menu_labels_paddingRight"/><attr format="dimension" name="menu_labels_paddingBottom"/><attr format="dimension" name="menu_labels_padding"/><attr format="reference|color" name="menu_labels_textColor"/><attr format="dimension" name="menu_labels_textSize"/><attr format="dimension" name="menu_labels_cornerRadius"/><attr format="boolean" name="menu_labels_showShadow"/><attr format="color" name="menu_labels_colorNormal"/><attr format="color" name="menu_labels_colorPressed"/><attr format="color" name="menu_labels_colorRipple"/><attr format="enum" name="menu_labels_position"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="reference" name="menu_icon"/><attr format="integer" name="menu_animationDelayPerItem"/><attr format="reference" name="menu_buttonToggleAnimation"/><attr format="boolean" name="menu_labels_singleLine"/><attr format="enum" name="menu_labels_ellipsize"><enum name="none" value="0"/><enum name="start" value="1"/><enum name="middle" value="2"/><enum name="end" value="3"/><enum name="marquee" value="4"/></attr><attr format="integer" name="menu_labels_maxLines"/><attr format="enum" name="menu_fab_size"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr format="reference" name="menu_labels_style"/><attr format="string" name="menu_labels_customFont"/><attr format="color" name="menu_shadowColor"/><attr format="dimension" name="menu_shadowRadius"/><attr format="dimension" name="menu_shadowXOffset"/><attr format="dimension" name="menu_shadowYOffset"/><attr format="color" name="menu_colorNormal"/><attr format="color" name="menu_colorPressed"/><attr format="color" name="menu_colorRipple"/><attr format="enum" name="menu_openDirection"><enum name="up" value="0"/><enum name="down" value="1"/></attr><attr format="color" name="menu_backgroundColor"/><attr format="string" name="menu_fab_label"/><attr format="reference" name="menu_fab_show_animation"/><attr format="reference" name="menu_fab_hide_animation"/></declare-styleable>
     <declare-styleable name="FloatingActionsMenu"><attr format="color" name="fab_addButtonColorPressed"/><attr format="color" name="fab_addButtonColorNormal"/><attr format="enum" name="fab_addButtonSize"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr format="color" name="fab_addButtonPlusIconColor"/><attr format="boolean" name="fab_addButtonStrokeVisible"/><attr format="reference" name="fab_labelStyle"/><attr format="enum" name="fab_labelsPosition"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="enum" name="fab_expandDirection"><enum name="up" value="0"/><enum name="down" value="1"/><enum name="left" value="2"/><enum name="right" value="3"/></attr></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
@@ -549,6 +555,7 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="labels_text_size">14sp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
@@ -635,10 +642,10 @@
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
     <string name="app_about_mybp">
-        MyBP: Budget Planner, a Personal Finance and Budget Planner app. All information you provide or store using this app remains personal and is not stored on remote servers.
+        A Personal Finance and Budget Planner app. All information you provide or store using this app remains personal and is not stored on remote servers.
     </string>
     <string name="app_icon_desc">MyBP icon</string>
-    <string name="app_name">MyBP: Budget Planner</string>
+    <string name="app_name">MyBP\nBudget Planner</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
@@ -647,6 +654,9 @@
     <string name="currency_sub">Set default currency for all your transactions</string>
     <string name="email">Email</string>
     <string name="email_us">Email Us\nmybp@gmail.com</string>
+    <string name="fab_email">Contact us</string>
+    <string name="fab_facebook">Like us on Facebook</string>
+    <string name="fab_twitter">Follow us on Twitter</string>
     <string name="facebook_app_id">744313335720418</string>
     <string name="facebook_like">Like us on facebook</string>
     <string name="feedback_feedback">Write your feedback</string>
@@ -655,9 +665,13 @@
     <string name="feedback_send">Send feedback</string>
     <string name="help_browse_all">Browse all articles</string>
     <string name="help_popular">Popular</string>
+    <string name="income_expenses_add">Add</string>
     <string name="income_expenses_all">All</string>
     <string name="income_expenses_create">Create</string>
+    <string name="income_expenses_description">Description</string>
+    <string name="income_expenses_expired">Expired</string>
     <string name="income_expenses_hint">Fill only fields you would like to plan for</string>
+    <string name="income_expenses_index">00</string>
     <string name="income_expenses_plan_hint">0.0</string>
     <string name="income_expenses_today">Today</string>
     <string name="nav_about">About</string>
@@ -673,13 +687,15 @@
     <string name="nav_statistics">Statistics</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="notificaiton_sub">Receive notifications</string>
     <string name="notification">Notifications</string>
     <string name="notification_individual">Individual notification</string>
     <string name="notification_individual_sub">Set individual notifications for each budget plan</string>
     <string name="notification_light">Notification light</string>
     <string name="notification_period">Set notification period</string>
+    <string name="notification_period_sub">When would you like to receive notifications?</string>
     <string name="notification_sound">Notification sound</string>
+    <string name="notification_sub">Set notification preferences</string>
+    <string name="notification_sub_2">Allow MyBP to remind you about updating your daily transactions</string>
     <string name="notification_vibration">Notification vibrations</string>
     <string name="plan_expenses">Expenses Planning</string>
     <string name="plan_expenses_Clothes">Clothes</string>
@@ -704,6 +720,7 @@
     <string name="profile">Profile</string>
     <string name="profile_google">Use Google account</string>
     <string name="profile_google_sub">Allow MyBP to use your Google account to setup a basic profile</string>
+    <string name="profile_sub">Provide information about your personal account</string>
     <string name="search_menu_title">Search</string>
     <string name="settings_currency">Currency Settings</string>
     <string name="settings_notification">Notification Settings</string>
@@ -731,7 +748,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/windowBackground</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorSecondary">@color/textColor</item>
         <item name="android:listDivider">@color/listDivider</item>
         <item name="android:textColor">@color/textColor</item>
         <item name="android:typeface">sans</item>
@@ -1760,10 +1777,10 @@
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
     <style name="ButtonDanger" parent="ButtonStyle">
-        <item name="backgroundTint">@color/danger</item>
+        <item name="backgroundTint">@color/red</item>
     </style>
     <style name="ButtonInfo" parent="ButtonStyle">
-        <item name="backgroundTint">@color/info</item>
+        <item name="backgroundTint">@color/blue</item>
     </style>
     <style name="ButtonModerate" parent="ButtonStyle">
         <item name="android:textColor">@color/teal</item>
@@ -1774,10 +1791,10 @@
         <item name="backgroundTint">@color/teal</item>
     </style>
     <style name="ButtonSuccess" parent="ButtonStyle">
-        <item name="backgroundTint">@color/success</item>
+        <item name="backgroundTint">@color/green</item>
     </style>
     <style name="ButtonWarning" parent="ButtonStyle">
-        <item name="backgroundTint">@color/warning</item>
+        <item name="backgroundTint">@color/yellow</item>
     </style>
     <style name="HorizontalDivider">
         <item name="android:layout_width">match_parent</item>
@@ -2077,26 +2094,14 @@
         <item name="android:layout_height">100dp</item>
         <item name="android:gravity">bottom</item>
     </style>
-    <style name="TextViewPlansCancel" parent="TextViewPlans">
-        <item name="android:layout_height">65dp</item>
-    </style>
-    <style name="TextViewPlansCancelExpenses" parent="TextViewPlansCancel">
-        <item name="android:background">@color/red</item>
-    </style>
-    <style name="TextViewPlansCancelIncome" parent="TextViewPlansCancel">
-        <item name="android:background">@color/green</item>
-    </style>
-    <style name="TextViewPlansCancelIncomeExpenses" parent="TextViewPlansCancel">
-        <item name="android:background">@color/yellow</item>
-    </style>
     <style name="TextViewPlansExpenses" parent="TextViewPlans">
-        <item name="android:background">@color/red</item>
+        <item name="android:background">@drawable/mybp_expenses_plan_background</item>
     </style>
     <style name="TextViewPlansIncome" parent="TextViewPlans">
-        <item name="android:background">@color/green</item>
+        <item name="android:background">@drawable/mybp_income_plan_background</item>
     </style>
     <style name="TextViewPlansIncomeExpenses" parent="TextViewPlans">
-        <item name="android:background">@color/yellow</item>
+        <item name="android:background">@drawable/mybp_income_expenses_plan_background</item>
     </style>
     <style name="TextViewPlansNumber">
         <item name="android:layout_width">wrap_content</item>
@@ -2112,7 +2117,28 @@
         <item name="android:textColor">@color/green</item>
     </style>
     <style name="TextViewPlansNumberIncomeExpenses" parent="TextViewPlansNumber">
-        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="TextViewPlansNumberObsoleteExpenses" parent="TextViewPlansNumber">
+        <item name="android:textColor">@color/red_light</item>
+    </style>
+    <style name="TextViewPlansNumberObsoleteIncome" parent="TextViewPlansNumber">
+        <item name="android:textColor">@color/green_light</item>
+    </style>
+    <style name="TextViewPlansNumberObsoleteIncomeExpenses" parent="TextViewPlansNumber">
+        <item name="android:textColor">@color/blue_light</item>
+    </style>
+    <style name="TextViewPlansObsolete" parent="TextViewPlans">
+        <item name="android:layout_height">65dp</item>
+    </style>
+    <style name="TextViewPlansObsoleteExpenses" parent="TextViewPlansObsolete">
+        <item name="android:background">@drawable/mybp_obsolete_expenses_plan_background</item>
+    </style>
+    <style name="TextViewPlansObsoleteIncome" parent="TextViewPlansObsolete">
+        <item name="android:background">@drawable/mybp_obsolete_income_plan_background</item>
+    </style>
+    <style name="TextViewPlansObsoleteIncomeExpenses" parent="TextViewPlansObsolete">
+        <item name="android:background">@drawable/mybp_obsolete_income_expenses_plan_background</item>
     </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>

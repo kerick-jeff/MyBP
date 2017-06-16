@@ -46,7 +46,7 @@ public class PlanTable extends DatabaseTable {
         );
     }
 
-    public boolean insert() {
+    public long insert() {
         SQLiteDatabase database = DatabaseHelper.getInstance(DatabaseHelper.getDhContext()).getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -56,9 +56,8 @@ public class PlanTable extends DatabaseTable {
         values.put(TO, getTo());
         values.put(CREATED, getCreated());
         values.put(UPDATED, getUpdated());
-        database.insert(name, null, values);
 
-        return true;
+        return database.insert(name, null, values);
     }
 
     public void setId(long id) {

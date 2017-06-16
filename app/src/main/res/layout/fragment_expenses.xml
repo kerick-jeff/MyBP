@@ -1,56 +1,35 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/mainContent">
+    android:orientation="vertical"
+    tools:context="com.mybp.ExpensesFragment">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-        <android.support.v7.widget.Toolbar
-            android:layout_height="?attr/actionBarSize"
-            android:layout_width="match_parent"
-            app:layout_scrollFlags="enterAlways"></android.support.v7.widget.Toolbar>
+        android:layout_marginTop="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:id="@+id/appBarLayout">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="scrollable"
+            android:background="@color/colorPrimary"
             app:tabIndicatorColor="@android:color/white"
-            app:tabSelectedTextColor="@android:color/white">
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/income_expenses_today"
-                android:id="@+id/tabItemtoday" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/income_expenses_all"
-                android:id="@+id/all" />
-
-        </android.support.design.widget.TabLayout>
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white" />
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="com.mybp.IncomeFragment"
-            android:id="@+id/tableLayoutIncome">
-
-            <!-- TODO: Update blank fragment layout -->
-
-        </RelativeLayout>
-    </android.support.v4.widget.NestedScrollView>
-</android.support.design.widget.CoordinatorLayout>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</LinearLayout>

@@ -54,7 +54,7 @@ public class NotificationActivity extends AppCompatActivity {
     private Switch switchNotificationSound;
     private Switch switchNotificationLight;
     private Switch switchNotificationVibrations;
-    private TextView notificationPeriods;
+    private TextView textViewNotificationPeriod;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +89,24 @@ public class NotificationActivity extends AppCompatActivity {
         switchNotificationSound = (Switch) findViewById(R.id.switchNotificationSound);
         switchNotificationLight = (Switch) findViewById(R.id.switchNotificationLight);
         switchNotificationVibrations = (Switch) findViewById(R.id.switchNotificationVibrations);
-        notificationPeriods = (TextView) findViewById(R.id.textViewNotificationPeriods);
+        textViewNotificationPeriod = (TextView) findViewById(R.id.textViewNotificationPeriod);
+
+        String notification = getResources().getString(R.string.notification);
+        String notificationSub = getResources().getString(R.string.notification_sub_2);
+        Span.span(notification, notificationSub, switchNotifications);
+
+        String notificationSound = getResources().getString(R.string.notification_sound);
+        Span.span(notificationSound, switchNotificationSound);
+
+        String notificationLight = getResources().getString(R.string.notification_light);
+        Span.span(notificationLight, switchNotificationLight);
+
+        String notificationVibration = getResources().getString(R.string.notification_vibration);
+        Span.span(notificationVibration, switchNotificationVibrations);
+
+        String notificationPeriod = getResources().getString(R.string.notification_period);
+        String notificationPeriodSub = getResources().getString(R.string.notification_period_sub);
+        Span.span(notificationPeriod, notificationPeriodSub, textViewNotificationPeriod);
     }
 
     private void updateViews() {
@@ -102,7 +119,7 @@ public class NotificationActivity extends AppCompatActivity {
             switchNotificationSound.setEnabled(true);
             switchNotificationLight.setEnabled(true);
             switchNotificationVibrations.setEnabled(true);
-            notificationPeriods.setEnabled(true);
+            textViewNotificationPeriod.setEnabled(true);
         } else {
             switchNotifications.setChecked(false);
 
@@ -110,7 +127,7 @@ public class NotificationActivity extends AppCompatActivity {
             switchNotificationSound.setEnabled(false);
             switchNotificationLight.setEnabled(false);
             switchNotificationVibrations.setEnabled(false);
-            notificationPeriods.setEnabled(false);
+            textViewNotificationPeriod.setEnabled(false);
         }
 
         // update switchNotificationSound view
@@ -145,7 +162,7 @@ public class NotificationActivity extends AppCompatActivity {
             switchNotificationSound.setEnabled(false);
             switchNotificationLight.setEnabled(false);
             switchNotificationVibrations.setEnabled(false);
-            notificationPeriods.setEnabled(false);
+            textViewNotificationPeriod.setEnabled(false);
 
             receiveNotifications = false;
             editor.putBoolean("receiveNotifications", receiveNotifications);
@@ -157,7 +174,7 @@ public class NotificationActivity extends AppCompatActivity {
         switchNotificationSound.setEnabled(true);
         switchNotificationLight.setEnabled(true);
         switchNotificationVibrations.setEnabled(true);
-        notificationPeriods.setEnabled(true);
+        textViewNotificationPeriod.setEnabled(true);
 
         receiveNotifications = true;
         editor.putBoolean("receiveNotifications", receiveNotifications);
